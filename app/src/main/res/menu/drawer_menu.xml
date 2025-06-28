@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home" android:title="Trang chủ" android:icon="@drawable/ic_home" />
+    <item android:id="@+id/nav_cart" android:title="Giỏ hàng" android:icon="@drawable/ic_cart" />
+    <item android:id="@+id/nav_favorite" android:title="Yêu thích" android:icon="@drawable/ic_heart" />
+    <item android:id="@+id/nav_menu" android:title="Tài khoản" android:icon="@drawable/ic_user" />
+</menu>
