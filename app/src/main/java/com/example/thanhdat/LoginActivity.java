@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +25,8 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText edtEmail, edtPassword;
     Button btnLogin;
+    TextView txtRegister, txtForgotPassword; // ✅ Thêm TextView mới
 
-    // ✅ Model User
     public static class User {
         @SerializedName("id")
         public String id;
@@ -39,9 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         public String phone;
     }
 
-    // ✅ API Interface
     public interface UserApi {
-        @GET("Users")  // <<-- phải viết đúng chữ "Users"
+        @GET("Users")
         Call<List<User>> getUsers();
     }
 
@@ -53,8 +53,18 @@ public class LoginActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        txtRegister = findViewById(R.id.txtRegister);
+        txtForgotPassword = findViewById(R.id.txtForgotPassword); // ✅ Ánh xạ ID
 
         btnLogin.setOnClickListener(v -> login());
+
+        txtRegister.setOnClickListener(v -> {
+            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+        });
+
+        txtForgotPassword.setOnClickListener(v -> {
+            startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class));
+        });
     }
 
     private void login() {
@@ -102,12 +112,10 @@ public class LoginActivity extends AppCompatActivity {
                         break;
                     }
                 }
-
                 if (!isValid) {
                     Toast.makeText(LoginActivity.this, "Sai email hoặc mật khẩu", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, "Lỗi mạng: " + t.getMessage(), Toast.LENGTH_SHORT).show();
