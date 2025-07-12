@@ -3,95 +3,95 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
+    android:background="#8DF091"
     android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
         <!-- Hình minh họa -->
         <ImageView
             android:id="@+id/imageLogin"
-            android:layout_width="200dp"
+            android:layout_width="390dp"
             android:layout_height="400dp"
-            android:src="@drawable/aa"
+            android:layout_marginBottom="24dp"
             android:contentDescription="login image"
-            android:layout_marginBottom="24dp" />
+            android:src="@drawable/aa" />
 
         <!-- Lời chào -->
         <TextView
-            android:text="Welcome to TD Store!"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Welcome to TD Store!"
+            android:textColor="#1D1C1C"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <!-- Tiêu đề -->
         <TextView
-            android:text="Vui lòng đăng nhập!"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Vui lòng đăng nhập!"
+            android:textColor="#1A1919"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <!-- Nhập email -->
         <EditText
             android:id="@+id/edtEmail"
-            android:hint="Email Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:padding="12dp"
             android:layout_marginBottom="12dp"
-            android:inputType="textEmailAddress" />
+            android:background="@drawable/edit_text_bg"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp" />
 
         <!-- Nhập mật khẩu -->
         <EditText
             android:id="@+id/edtPassword"
-            android:hint="Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:padding="12dp"
             android:layout_marginBottom="20dp"
-            android:inputType="textPassword" />
+            android:background="@drawable/edit_text_bg"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp" />
 
         <!-- Nút Login -->
         <Button
             android:id="@+id/btnLogin"
-            android:text="Đăng nhập"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#6200EE"
-            android:layout_marginBottom="16dp" />
+            android:text="Đăng nhập"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
 
         <!-- Đăng ký -->
         <TextView
             android:id="@+id/txtRegister"
-            android:text="Chưa có tài khoản? Đăng ký"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Chưa có tài khoản? Đăng ký"
+            android:textColor="#070707"
+            android:textSize="14sp" />
 
         <!-- Quên mật khẩu -->
         <TextView
             android:id="@+id/txtForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Quên mật khẩu?"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="8dp" />
+            android:textColor="#090909" />
     </LinearLayout>
 </ScrollView>
